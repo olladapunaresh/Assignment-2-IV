@@ -3,7 +3,7 @@ import './components/map.css'
 import LineChart from './components/LineChart'
 import Navbar from './components/Navbar';
 import React , { useRef, useEffect } from 'react';
-import * as mapboxgl from 'mapbox-gl';
+// import * as mapboxgl from 'mapbox-gl';
 import mapboxgl from 'mapbox-gl/dist/mapbox-gl';
 import MapboxWorker from 'mapbox-gl/dist/mapbox-gl-csp-worker';
 mapboxgl.workerClass = MapboxWorker;
