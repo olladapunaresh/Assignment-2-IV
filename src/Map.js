@@ -47,7 +47,7 @@ var filterDay = ['!=', ['string', ['get', 'DAY_OF_WEEK']], 'placeholder'];
     type: 'circle',
     source: {
       type: 'geojson',
-      data: 'new_road_crash.geojson' // replace this with the url of your own geojson
+      data: './new_road_crash.geojson' // replace this with the url of your own geojson
     },
     paint: {
 
@@ -113,7 +113,7 @@ var filterDay = ['!=', ['string', ['get', 'DAY_OF_WEEK']], 'placeholder'];
     type: 'line',
     source: {
       type: 'geojson',
-      data: 'new_Traffic_Volume.geojson' // replace this with the url of your own geojson
+      data: './new_Traffic_Volume.geojson' // replace this with the url of your own geojson
     },
     paint: {
       'line-color': ['get', 'color'],
