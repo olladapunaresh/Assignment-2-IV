@@ -9,7 +9,7 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 
 
 mapboxgl.accessToken = 'pk.eyJ1Ijoib2xsYWRhcHUiLCJhIjoiY2t0Mmx2Z2trMGxrZzMwcjJlNTBsbXJ1biJ9.IKx4MbNoGLsI2itEuHVxxg';
-
+// mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
 class Map extends React.Component {
 
   constructor(props){
