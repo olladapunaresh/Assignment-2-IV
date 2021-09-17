@@ -7,10 +7,12 @@ class Home extends React.Component {
    
     
     <div className='home'>
-         
+
+      
       <a>Assignment 2: Information Visualisation<br/></a>
 
     </div>
+    
     
     
   )

@@ -4,9 +4,10 @@ import LineChart from './components/LineChart'
 import Navbar from './components/Navbar';
 import React , { useRef, useEffect } from 'react';
 import ReactMapGL, {Marker, Popup } from 'react-map-gl';
-// import {geoJSON, GeoJSON} from 'leaflet';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import mapboxgl from 'mapbox-gl';
+import vol from './new_Traffic_Volume.geojson';
+import col from './new_road_crash.geojson';
 
 // eslint-disable-next-line import/no-webpack-loader-syntax
 mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
@@ -48,7 +49,7 @@ var filterDay = ['!=', ['string', ['get', 'DAY_OF_WEEK']], 'placeholder'];
     type: 'circle',
     source: {
       type: 'geojson',
-      data: '/new_road_crash.geojson' // replace this with the url of your own geojson
+      data: col // replace this with the url of your own geojson
     },
     paint: {
 
@@ -114,7 +115,7 @@ var filterDay = ['!=', ['string', ['get', 'DAY_OF_WEEK']], 'placeholder'];
     type: 'line',
     source: {
       type: 'geojson',
-      data: 'new_Traffic_Volume.geojson' // replace this with the url of your own geojson
+      data: vol // replace this with the url of your own geojson
     },
     paint: {
       'line-color': ['get', 'color'],
