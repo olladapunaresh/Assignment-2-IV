@@ -42,14 +42,14 @@ map.addControl(new mapboxgl.NavigationControl({padding: 3}));
 map.on('load', () => {
 var filterHour = ['==', ['number', ['get', 'Hour']], 12];
 var filterDay = ['!=', ['string', ['get', 'DAY_OF_WEEK']], 'placeholder'];
-
+map.addSource('coll_data', {
+  type: 'geojson',
+  data: './new_road_crash.geojson' // replace this with the url of your own geojson
+});
   map.addLayer({
     id: 'collisions',
     type: 'circle',
-    source: {
-      type: 'geojson',
-      data: './new_road_crash.geojson' // replace this with the url of your own geojson
-    },
+    source: 'coll_data',
     paint: {
 
       'circle-color': [
