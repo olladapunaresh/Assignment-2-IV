@@ -4,7 +4,10 @@ import LineChart from './components/LineChart'
 import Navbar from './components/Navbar';
 import React , { useRef, useEffect } from 'react';
 import * as mapboxgl from 'mapbox-gl';
-import ReactMapGL, {Marker, Popup } from 'react-map-gl';
+import mapboxgl from 'mapbox-gl/dist/mapbox-gl';
+import MapboxWorker from 'mapbox-gl/dist/mapbox-gl-csp-worker';
+mapboxgl.workerClass = MapboxWorker;
+// import ReactMapGL, {Marker, Popup } from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
 // import MapboxWorker from 'worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker';
 
