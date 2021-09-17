@@ -6,10 +6,10 @@ import React , { useRef, useEffect } from 'react';
 import mapboxgl  from 'mapbox-gl';
 import ReactMapGL, {Marker, Popup } from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
-
+import MapboxWorker from 'mapbox-gl/dist/mapbox-gl-csp-worker';
 
 mapboxgl.accessToken = 'pk.eyJ1Ijoib2xsYWRhcHUiLCJhIjoiY2t0Mmx2Z2trMGxrZzMwcjJlNTBsbXJ1biJ9.IKx4MbNoGLsI2itEuHVxxg';
-// mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
+mapboxgl.workerClass = require('mapbox-gl/dist/mapbox-gl-csp-worker').default;
 class Map extends React.Component {
 
   constructor(props){
