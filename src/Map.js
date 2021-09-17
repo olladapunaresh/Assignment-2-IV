@@ -43,7 +43,7 @@ map.addControl(new mapboxgl.NavigationControl({padding: 3}));
 map.on('load', () => {
 var filterHour = ['==', ['number', ['get', 'Hour']], 12];
 var filterDay = ['!=', ['string', ['get', 'DAY_OF_WEEK']], 'placeholder'];
-
+console.log(col);
   map.addLayer({
     id: 'collisions',
     type: 'circle',
