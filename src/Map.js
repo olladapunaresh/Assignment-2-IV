@@ -48,7 +48,6 @@ var filterDay = ['!=', ['string', ['get', 'DAY_OF_WEEK']], 'placeholder'];
     type: 'circle',
     source: {
       type: 'geojson',
-      format: GeoJSON(),
       data: './new_road_crash.geojson' // replace this with the url of your own geojson
     },
     paint: {
