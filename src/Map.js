@@ -4,7 +4,7 @@ import LineChart from './components/LineChart'
 import Navbar from './components/Navbar';
 import React , { useRef, useEffect } from 'react';
 import ReactMapGL, {Marker, Popup } from 'react-map-gl';
-import {GeoJSON} from 'react-leaflet';
+import {geoJSON, GeoJSON} from 'leaflet';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import mapboxgl from 'mapbox-gl';
 
@@ -48,7 +48,7 @@ var filterDay = ['!=', ['string', ['get', 'DAY_OF_WEEK']], 'placeholder'];
     type: 'circle',
     source: {
       type: 'geojson',
-      format: new GeoJSON(),
+      format: GeoJSON(),
       data: './new_road_crash.geojson' // replace this with the url of your own geojson
     },
     paint: {
