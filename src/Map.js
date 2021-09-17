@@ -3,10 +3,10 @@ import './components/map.css'
 import LineChart from './components/LineChart'
 import Navbar from './components/Navbar';
 import React , { useRef, useEffect } from 'react';
-import mapboxgl  from 'mapbox-gl';
+import * as mapboxgl from 'mapbox-gl';
 import ReactMapGL, {Marker, Popup } from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
-import MapboxWorker from 'mapbox-gl/dist/mapbox-gl-csp-worker';
+// import MapboxWorker from 'worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker';
 
 mapboxgl.accessToken = 'pk.eyJ1Ijoib2xsYWRhcHUiLCJhIjoiY2t0Mmx2Z2trMGxrZzMwcjJlNTBsbXJ1biJ9.IKx4MbNoGLsI2itEuHVxxg';
 mapboxgl.workerClass = require('mapbox-gl/dist/mapbox-gl-csp-worker').default;
