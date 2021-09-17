@@ -4,7 +4,7 @@ import LineChart from './components/LineChart'
 import Navbar from './components/Navbar';
 import React , { useRef, useEffect } from 'react';
 import ReactMapGL, {Marker, Popup } from 'react-map-gl';
-import {geoJSON, GeoJSON} from 'leaflet';
+// import {geoJSON, GeoJSON} from 'leaflet';
 import 'mapbox-gl/dist/mapbox-gl.css';
 import mapboxgl from 'mapbox-gl';
 
