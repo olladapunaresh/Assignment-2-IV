@@ -5,15 +5,11 @@ import Navbar from './components/Navbar';
 import React , { useRef, useEffect } from 'react';
 import ReactMapGL, {Marker, Popup } from 'react-map-gl';
 import 'mapbox-gl/dist/mapbox-gl.css';
-// import MapboxWorker from 'worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker';
 import mapboxgl from 'mapbox-gl';
 
 // eslint-disable-next-line import/no-webpack-loader-syntax
 mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default;
-
-
 mapboxgl.accessToken = 'pk.eyJ1Ijoib2xsYWRhcHUiLCJhIjoiY2t0Mmx2Z2trMGxrZzMwcjJlNTBsbXJ1biJ9.IKx4MbNoGLsI2itEuHVxxg';
-// mapboxgl.workerClass = require('mapbox-gl/dist/mapbox-gl-csp-worker').default;
 class Map extends React.Component {
 
   constructor(props){
