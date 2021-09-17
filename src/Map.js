@@ -42,14 +42,14 @@ map.addControl(new mapboxgl.NavigationControl({padding: 3}));
 map.on('load', () => {
 var filterHour = ['==', ['number', ['get', 'Hour']], 12];
 var filterDay = ['!=', ['string', ['get', 'DAY_OF_WEEK']], 'placeholder'];
-map.addSource('coll_data', {
-  type: 'geojson',
-  data: './new_road_crash.geojson' // replace this with the url of your own geojson
-});
+
   map.addLayer({
     id: 'collisions',
     type: 'circle',
-    source: 'coll_data',
+    source: {
+      type: 'geojson',
+      data: 'new_road_crash.geojson' // replace this with the url of your own geojson
+    },
     paint: {
 
       'circle-color': [
@@ -114,7 +114,7 @@ map.addSource('coll_data', {
     type: 'line',
     source: {
       type: 'geojson',
-      data: './new_Traffic_Volume.geojson' // replace this with the url of your own geojson
+      data: 'new_Traffic_Volume.geojson' // replace this with the url of your own geojson
     },
     paint: {
       'line-color': ['get', 'color'],
